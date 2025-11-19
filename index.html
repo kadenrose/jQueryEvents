@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery DOM Events Practice</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <h1>jQuery DOM Events</h1>
+</header>
+
+<main id="sortable">
+
+    <section id="canvas1">
+        <h2>Hover Event</h2>
+        <p class="sr-only">On hover, this text should display or hide!</p>
+        <button>Hover Button</button>
+    </section>
+
+    <section id="canvas2">
+        <h2>Click Event</h2>
+        <p class="sr-only">On click, this text should display or hide!</p>
+        <button>Click Button</button>
+    </section>
+
+    <section id="canvas3">
+        <h2>Focus Event</h2>
+        <p class="sr-only">On focus (for the button), this text should display! Without focus, it should hide.</p>
+        <button>Focus Button</button>
+    </section>
+
+    <section id="canvas4">
+        <h2>Change Event - Checkboxes</h2>
+        <form>
+        <fieldset>
+            <legend>Choose some pizza toppings:</legend>
+            <input type="checkbox" id="cheese" value="cheese">
+            <label for="cheese">Cheese</label>
+            <input type="checkbox" id="pepperoni" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            <input type="checkbox" id="mushrooms" value="mushrooms">
+            <label for="mushrooms">Mushrooms</label>
+            <input type="checkbox" id="pineapple" value="pineapple">
+            <label for="pineapple">Pineapple</label>
+            <input type="checkbox" id="peppers" value="peppers">
+            <label for="peppers">Peppers</label>
+            <input type="checkbox" id="ham" value="ham">
+            <label for="ham">Ham</label>
+        </fieldset>
+        </form>
+        <p></p>
+    </section>
+
+    <section id="canvas5">
+        <h2>Change Event - Dropdown</h2>
+        <form>
+        <label for="selectBox">Choose a Color:</label>
+        <select name="selectBox" id="selectBox">
+            <option value="DD2C00">Red</option>
+            <option value="EF6C00">Orange</option>
+            <option value="ffcc14">Yellow</option>
+            <option value="43A047">Green</option>
+            <option value="2962FF">Blue</option>
+            <option value="F48FB1">Pink</option>
+            <option value="7C4DFF">Purple</option>
+            <option value="90A4AE">Gray</option>
+            <option value="6D4C41">Brown</option>
+            <option value="000">Black</option>
+            <option value="fff">White</option>
+        </select>
+        </form>
+        <p>Choose a Color Above</p>
+    </section>
+
+    <section id="canvas6">
+        <h2>Displaying an Error Message (sibling)</h2>
+        <form>
+        <label for="fullName">Full Name:</label>
+        <input type="text" name="fullName" id="fullName">
+        <span></span>
+        <label for="myEmail">Email:</label>
+        <input type="email" name="myEmail" id="myEmail">
+        <span></span>
+        <input type="submit" id="siblingSubmit" value="Submit">
+        </form>
+        <p></p>
+    </section>
+
+    <section id="canvas7">
+        <h2>Background Color Switcher</h2>
+        <div></div>
+        <button>Change the Color</button>
+    </section>
+
+    <section id="canvas8">
+        <h2>Keyboard Events</h2>
+        <p>Use your arrow keys to move the emoji in that direction inside of the box below.</p>
+        <div tabindex="-1">
+          <button id="move-button" style="position: absolute; top: 0; left: 0;" aria-label="use arrow keys to move this emoji">
+            <svg viewBox="0 0 496 512" width="100" title="sad-cry">
+              <path d="M248 8C111 8 0 119 0 256c0 90.1 48.2 168.7 120 212.1V288c0-8.8 7.2-16 16-16s16 7.2 16 16v196.7c29.5 12.4 62 19.3 96 19.3s66.5-6.9 96-19.3V288c0-8.8 7.2-16 16-16s16 7.2 16 16v180.1C447.8 424.7 496 346 496 256 496 119 385 8 248 8zm-65.5 216.5c-14.8-13.2-46.2-13.2-61 0L112 233c-3.8 3.3-9.3 4-13.7 1.6-4.4-2.4-6.9-7.4-6.1-12.4 4-25.2 34.2-42.1 59.9-42.1S208 197 212 222.2c.8 5-1.7 10-6.1 12.4-5.8 3.1-11.2.7-13.7-1.6l-9.7-8.5zM248 416c-26.5 0-48-28.7-48-64s21.5-64 48-64 48 28.7 48 64-21.5 64-48 64zm149.8-181.5c-5.8 3.1-11.2.7-13.7-1.6l-9.5-8.5c-14.8-13.2-46.2-13.2-61 0L304 233c-3.8 3.3-9.3 4-13.7 1.6-4.4-2.4-6.9-7.4-6.1-12.4 4-25.2 34.2-42.1 59.9-42.1S400 197 404 222.2c.6 4.9-1.8 9.9-6.2 12.3z" />
+            </svg>
+          </button>
+        </div>
+    </section>
+
+    <section id="canvas9">
+        <h2>More Keyboard Events - Input</h2>
+        <label for="color-num">Enter a Number in the input below:</label>
+        <input type="text" name="color-num" id="color-num">
+        <div></div>
+    </section>
+
+<!--     <section id="canvas10">
+        <h2>Mouse Events</h2>
+        <div>
+            <div id="cursor" style="position: absolute; top: 0; left: 0;">
+                <img src="https://assets.codepen.io/1351055/move.gif" alt="">
+            </div>
+        </div>
+    </section> -->
+
+</main>
+<footer>
+    <p>Copyright &copy;<span>2023</span> - GIT418 - Prof. Barnett</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
